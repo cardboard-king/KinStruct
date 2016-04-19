@@ -30,7 +30,7 @@ def make_extraction(dir_path,res,save_path = None):
 	if save_path == None:
 		save_path = dir_path
 	file_path1 = dir_path + "/pocket.mol2"
-	file_path2 = save_path + "/gk.mol2"
+	file_path2 = save_path + "/gk.pdb"
 	pymol.cmd.load(file_path1)
 	selection_name = "gk"
 	selector = "resi " + str(res[0])
@@ -60,9 +60,9 @@ def make_extractions(organism_path,gatekeepers_path,save_path):
 
 
 
-#make_extractions(myurl1,
-#	"/Users/matthias/Documents/hibit.in/development/KinStruct/gatekeepersBound.csv",
-#	saveurl1)
+make_extractions(myurl1,
+	"/Users/matthias/Documents/hibit.in/development/KinStruct/gatekeepersBound.csv",
+	saveurl1)
 make_extractions(myurl2,
 	"/Users/matthias/Documents/hibit.in/development/KinStruct/gatekeepersUnbound.csv",
 	saveurl2)
